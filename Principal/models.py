@@ -16,10 +16,10 @@ class AlertaPerona(models.Model):
     ubicacion = models.CharField(max_length=50)
     latitud = models.CharField(max_length=50)
     longitud = models.CharField(max_length=50)
-    tipoAccidente = models.CharField(primary_key=True,max_length=50)
+    tipoAccidente = models.CharField(max_length=50)
 
     def __str__(self):
-        return "%s" % (self.nombrePer)
+        return "%s %s" % (self.id, self.nombrePer)
 
 class Accidente(models.Model):
     Accidente = models.CharField(primary_key=True,max_length=15)
